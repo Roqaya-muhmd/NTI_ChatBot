@@ -29,7 +29,6 @@ async def get_response(chat_request: ChatRequest):
             
         cohere_client = Client(api_key=api_key)
         
-        # Get response from Cohere
         response = cohere_client.chat(
             model="command",  # Using the command model
             message=chat_request.prompt,
